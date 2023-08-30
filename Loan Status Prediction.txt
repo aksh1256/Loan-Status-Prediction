@@ -1,0 +1,20 @@
+# 1 Data
+# 2 Data Pre-processing
+# 3 Train Test Split
+# 4 Support Vector Machine Model
+# 5 New Data
+# 6 Trained Support Vector Machine Model
+# 7 Prediction(Approved or Reject)
+
+
+Importing Dependencies
+load Dataset
+print sample of dataset using dataset_name.head() function.
+check rows and columns using dataset_name.shape function.
+See statistical measures using dataset_name.describe() function.
+Found missing values in dataset using dataset_name.isnull().sum() function.
+Drop all the missing values using dataset_name.dropna() function
+Replace No = 0 and Yes = 1 in Loan Status column using *loan_dataset.replace({"Loan_Status":{'N':0, 'Y':1}}, inplace=True)*
+Check the all Values in dependent columns using *loan_dataset['Dependents'].value_counts()*
+Replace 4 for 3+ in dependents column using *loan_dataset = loan_dataset.replace(to_replace='3+', value=4)*
+Visualise the relation between educated and loan_status using *sns.countplot(x='Education', hue='Loan_Status', data=loan_dataset)*
